@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Perfil do Usuário</title>
+    <link href="https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="profile-container">
+        <i class='bx bxs-user'></i>
+        <h1>Perfil do Usuário</h1>
+        <div class="info">
+            <p><strong>Email:</strong> usuario@example.com</p>
+        </div>
+        <div class="actions">
+            <a href="alterarlogin.html" class="btn-alterar-senha">Alterar Senha</a>
+            <a href="alterarlogin.html" class="btn-alterar-email">Alterar Email</a>
+            <button class="btn-logout" onclick="logout()">Logout</button>
+        </div>        
+    </div>
+
+    <script>
+        function logout() {
+            // Aqui você pode adicionar qualquer lógica necessária para o logout
+            // Por exemplo, redirecionar para a página de login
+            window.location.href = 'login.html';
+        }
+    </script>
+</body>
+</html>
