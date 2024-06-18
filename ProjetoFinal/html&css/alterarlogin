@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Alterar Informações</title>
+    <link href="https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="register-container">
+        <i class='bx bxs-user'></i>
+        <h1>Alterar Informações</h1>
+        <form id="register-form">
+            <input type="email" placeholder="Email" required>
+            <input type="password" id="password" placeholder="Senha" required>
+            <input type="password" id="confirm-password" placeholder="Confirme a Senha" required>
+            <div id="error-message" class="error-message"></div>
+            <button type="submit" class="btn-salvar">Alterar</button>
+        </form>
+    </div>
+
+    <script>
+        document.getElementById('register-form').addEventListener('submit', function(event) {
+            event.preventDefault();
+            const password = document.getElementById('password').value;
+            const confirmPassword = document.getElementById('confirm-password').value;
+            const errorMessage = document.getElementById('error-message');
+
+            if (password !== confirmPassword) {
+                errorMessage.textContent = 'As senhas não coincidem!';
+            } else {
+                errorMessage.textContent = '';
+                // Redireciona para a página de índice (index.html) se as senhas coincidirem
+                window.location.href = 'index.html';
+            }
+        });
+    </script>
+</body>
+</html>
